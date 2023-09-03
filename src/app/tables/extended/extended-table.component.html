@@ -1,0 +1,39 @@
+<!-- Basic Datatables -->
+<section id="ngx-datatable-basic">
+  
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title">Basic</h4>
+        </div>
+        <div class="card-content">
+          <div class="card-body">
+            
+            <!-- ngx-datatable Basic -->
+              <ngx-datatable *ngIf="IsDataReady" [rows]="rows" [rowHeight]="50" class="bootstrap core-bootstrap" [limit]="10"
+              [columnMode]="ColumnMode.force" [headerHeight]="50" [footerHeight]="50" [scrollbarH]="true">
+              
+              <ngx-datatable-column name="ID Quai" prop="idQuai" [width]="100"></ngx-datatable-column>
+              
+              <ngx-datatable-column name="Nom Quai" prop="nomQuai" [width]="100"></ngx-datatable-column>
+              
+              <ngx-datatable-column name="Etat Quai" prop="etat" [width]="100"></ngx-datatable-column>
+
+              <ngx-datatable-column name="Actions" [width]="70">
+                <ng-template ngx-datatable-cell-template let-row ='row'> 
+                    <span (click)= 'this.Disponible(row["idQuai"])' ><i class="ft-more-vertical text-primary cursor-pointer mr-2"></i></span>
+                    <span (click)= 'this.Indisponible(row["idQuai"])' ><i class="ft-edit text-primary cursor-pointer"></i></span>
+                </ng-template>
+              </ngx-datatable-column>
+
+            </ngx-datatable>
+            <!--/ ngx-datatable Basic -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  

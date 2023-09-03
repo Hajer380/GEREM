@@ -1,0 +1,121 @@
+<div class="modal-header">
+  <h4 class="modal-title"> Ajouter  </h4>
+  <button (click)="clickAdd()" type="button" id="close " class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+    x
+  </button>
+</div>
+<form [formGroup]="myForm" (ngSubmit)="submitForm()">
+  <div class="modal-body taskboard-modal">
+    <div class="container">
+      <fieldset class="form-group position-relative has-icon-left">
+        <div class="form-control-position">
+          
+        </div>
+        <label class="form-control-label">Nom Quai</label>
+        <select  formControlName ="qaui"
+          name="idQuai"   class="form-control">
+            <option *ngFor="let item of listQuai " [ngValue]="item.idQuai">{{item.nomQuai}}</option>
+          </select>
+          <div class="form-control-position control-position-right">
+        </div>
+      </fieldset>
+      <fieldset class="form-group position-relative has-icon-left">
+        <div class="form-control-position">
+          
+        </div>
+        <label class="form-control-label">Nom Remorque</label>
+        <select  formControlName ="remorque"
+        name="remorque"   class="form-control">
+          <option *ngFor="let item of listRemorque " [ngValue]="item.idRemorque">{{item.nomRemorque}}</option>
+        </select>
+          <div class="form-control-position control-position-right">
+        </div>
+      </fieldset>
+     <fieldset class="form-group position-relative has-icon-left">
+        <div class="form-control-position">
+          
+        </div>
+        <label for="nom" class="form-control-label">Nom Site
+        </label>
+        <select formControlName ="nomSite"
+       
+        name="nomSite"   class="form-control">
+          <option>Site 1</option>
+          <option>Site 2</option>
+        </select>
+        <div class="form-control-position control-position-right">
+          
+        </div>
+      </fieldset>
+      <fieldset class="form-group position-relative has-icon-left">
+        <div class="form-control-position">
+          <i ></i>
+        </div>
+        <label for="nom" class="form-control-label" >Local</label>
+        <select formControlName ="local"
+       
+        name="local"    
+        class="form-control">
+          <option>Ben Arous</option>
+          <option>Rades</option>
+        </select>
+        <div class="form-control-position control-position-right">
+          <i ></i>
+        </div>
+      </fieldset>
+      <fieldset class="form-group position-relative has-icon-left">
+        <div class="form-control-position">
+          
+        </div>
+        <label class="form-control-label">dateEAPL
+        </label>
+        <input formControlName ="dateEAPL"
+    
+        name="dateEAPL"type="date" 
+           placeholder="dateEAPL" class="form-control" >
+        <div class="form-control-position control-position-right">
+         
+        </div>
+      </fieldset>
+      <fieldset class="form-group position-relative has-icon-left">
+        <div class="form-control-position">
+          <i ></i>
+        </div>
+        <label class="form-control-label">timeRAPL</label>
+        <input formControlName ="timeRAPL"
+      
+        name="timeRAPL" type="datetime-local" 
+          placeholder="timeRAPL" class="form-control">
+        <div class="form-control-position control-position-right">
+          <i ></i>
+        </div>
+      </fieldset>
+      <fieldset class="form-group position-relative has-icon-left">
+        <div class="form-control-position">
+        
+        </div>
+        <label class="form-control-label">timeSPL</label>
+        <input formControlName ="timeSPL"
+       
+        name="timeSPL"  type="datetime-local" 
+           placeholder="timeSPL" class="form-control" >
+        <div class="form-control-position control-position-right">
+         
+        </div>
+      </fieldset>
+     
+     
+    </div>
+  </div>
+  <div class="modal-footer taskboard-modal-footer">
+    <button type="button"  id="close" aria-label="Close"  class="btn btn-secondary" data-bs-dismiss="modal" (click)="activeModal.dismiss('Cross click')">
+      Fermer
+   </button>
+    <button type="button"  aria-label="btn-save"  class="btn btn-primary btn-save" (click)="addSite()">
+     Ajouter
+    </button>
+    <button type="button" *ngIf="showUpdate" aria-label="btn-save"  class="btn btn-primary btn-save" (click)="updateSite()">
+      Modifier 
+     </button>
+  </div>
+</form>

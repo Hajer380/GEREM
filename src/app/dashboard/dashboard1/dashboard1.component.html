@@ -1,0 +1,65 @@
+<!-- Basic Datatables -->
+<section id="ngx-datatable-basic">
+  
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title">Planning d'entrée des remorques aux sites </h4>
+        </div>
+        <div class="card-content">
+          <div class="card-body">
+            
+            <!-- ngx-datatable Basic -->
+            <fieldset class="form-group">
+             
+              <label for="ngx-filter-ref" class="float-left">
+                <input
+                #search
+                id="search"
+                type="text"
+                class="form-control"
+                placeholder="Chercher"
+                aria-label="Chercher"
+                aria-describedby="basic-addon1"
+              />
+              </label>
+              <button type="button" class="btn btn-primary mr-2" >
+                <span class="d-flex align-items-center">
+                  <span>Chercher</span>
+                </span>
+              </button>
+            </fieldset>
+
+         
+              <ngx-datatable *ngIf="IsDataReady" [rows]="rows" [rowHeight]="50" class="bootstrap core-bootstrap" [limit]="10"
+              [columnMode]="ColumnMode.force" [headerHeight]="50" [footerHeight]="50" [scrollbarH]="true">
+              <ngx-datatable-column name="ID Site" prop="idSite" [width]="150"></ngx-datatable-column>
+              <ngx-datatable-column name="Nom Site" prop="nomSite" [width]="150"></ngx-datatable-column>
+              
+              <ngx-datatable-column name="Nom Quai" prop="nomQuai" [width]="150"></ngx-datatable-column>
+              
+              <ngx-datatable-column name="Nom Remorque" prop="nomRemorque" [width]="150"></ngx-datatable-column>
+              <ngx-datatable-column name="Degre d'urgence" prop="degUrg" [width]="150"></ngx-datatable-column>
+              
+              <ngx-datatable-column name="Local" prop="local" [width]="150"></ngx-datatable-column>
+              
+              <ngx-datatable-column name="Date EAPL" prop="dateEAPL" [width]="150"></ngx-datatable-column>
+             
+            
+            
+            </ngx-datatable>
+
+
+            
+            <!--/ ngx-datatable Basic -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+   
+

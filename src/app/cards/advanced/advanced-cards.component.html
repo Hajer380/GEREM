@@ -1,0 +1,39 @@
+<!-- Basic Datatables -->
+<section id="ngx-datatable-basic">
+  
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title">Tableau des quais </h4>
+        </div>
+        <div class="card-content">
+          <div class="card-body">
+            
+            <!-- ngx-datatable Basic -->
+              <ngx-datatable *ngIf="IsDataReady" [rows]="rows" [rowHeight]="50" class="bootstrap core-bootstrap" [limit]="10"
+              [columnMode]="ColumnMode.force" [headerHeight]="20" [footerHeight]="20" [scrollbarH]="true">
+              
+              <ngx-datatable-column name="ID Quai" prop="idQuai" [width]="30"></ngx-datatable-column>
+              
+              <ngx-datatable-column name="Nom Quai" prop="nomQuai" [width]="30"></ngx-datatable-column>
+              
+              <ngx-datatable-column name="Etat Quai" prop="etat" [width]="10"></ngx-datatable-column>
+
+              <ngx-datatable-column name="Disponibilitée" [width]="70">
+                <ng-template ngx-datatable-cell-template let-row ='row'> 
+                  <span (click)= 'this.Indisponible(row["idQuai"])'class="badge badge-warning mb-1 mr-2"><i class="ft-alert-triangle"></i></span>
+                    <!-- <span (click)= 'this.Disponible(row["idQuai"])' ><i class="ft-more-vertical text-success cursor-pointer mr-2"></i></span> -->
+                    <span (click)= 'this.Disponible(row["idQuai"])' class="badge badge-success mb-1 mr-2"><i class="ft-check-circle"></i></span>                </ng-template>
+              </ngx-datatable-column>
+
+            </ngx-datatable>
+            <!--/ ngx-datatable Basic -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  

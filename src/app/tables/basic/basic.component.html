@@ -1,0 +1,129 @@
+<!-- Basic Datatables -->
+<section id="ngx-datatable-basic">
+  
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title">Planning des remorques </h4>
+        </div>
+        <div class="card-content">
+          <div class="card-body">
+            <div class="my-3">
+              <button type="button" class="btn btn-primary mr-2" (click)="openmodal()">
+                <span class="d-flex align-items-center">
+                  <i class="ft-plus mr-1"></i>
+                  <span>Create</span>
+                </span>
+              </button>
+             
+            </div>
+
+
+            <!-- modal -->
+
+            <!-- <button class="btn btn-lg btn-outline-primary" (click)="open(mymodal)">Open My Modal</button>
+               
+            <ng-template #mymodal let-modal>
+              <div class="modal-header">
+                <h4 class="modal-title" id="modal-basic-title">Veuillez remplir les champs </h4>
+                <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                  <span aria-hidden="true">×</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div>
+                  <label for="name">Nom :</label>
+                  <input type="text" id="name" name="user_name">
+              </div>
+              <div>
+                  <label for="mail">e-mail :</label>
+                  <input type="email" id="mail" name="user_mail">
+              </div>
+              <div>
+                  <label for="msg">Message :</label>
+                  <textarea id="msg" name="user_message"></textarea>
+              </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Ok</button>
+              </div>
+            </ng-template> -->
+            
+            <!-- ngx-datatable Basic -->
+            <fieldset class="form-group">
+             
+              <label for="ngx-filter-ref" class="float-left">
+                <input
+                #search
+                id="search"
+                type="text"
+                class="form-control"
+                placeholder="Chercher"
+                aria-label="Search"
+                aria-describedby="basic-addon1"
+              />
+              </label>
+              <button type="button" class="btn btn-primary mr-2" >
+                <span class="d-flex align-items-center">
+                  <span>Chercher</span>
+                </span>
+              </button>
+            </fieldset>
+              <ngx-datatable *ngIf="IsDataReady" [rows]="rows" [rowHeight]="50" class="bootstrap core-bootstrap" [limit]="10"
+              [columnMode]="ColumnMode.force" [headerHeight]="50" [footerHeight]="50" [scrollbarH]="true">
+          
+              <ngx-datatable-column name="Nom Site" prop="nomSite" [width]="150"></ngx-datatable-column>
+              <ngx-datatable-column name="Local" prop="local" [width]="150"></ngx-datatable-column>
+              <ngx-datatable-column name="Date EAPL" prop="dateEAPL" [width]="150"></ngx-datatable-column>
+
+              <ngx-datatable-column name="Nom Quai" prop="nomQuai" [width]="150"></ngx-datatable-column>
+              <ngx-datatable-column name="Nom Remorque" prop="nomRemorque" [width]="150"></ngx-datatable-column>
+            
+              <ngx-datatable-column name="Time RAPL" prop="timeRAPL" [width]="150"></ngx-datatable-column>
+              <ngx-datatable-column name="Time EAPL" prop="timeEAPL" [width]="150"></ngx-datatable-column>
+              <ngx-datatable-column name="Actions" [width]="100">
+
+
+                <ng-template ngx-datatable-cell-template let-row ='row'> 
+                    <!-- <span (click)= 'this.delete(row["idSite"])' >
+                      <i class="ft-more-vertical text-primary cursor-pointer mr-2"></i></span> -->
+                      <span (click)= "openmodal()" class="badge badge-info mb-1 mr-2"><i class="ft-plus"></i></span>
+
+                      <span (click)= 'this.delete(row["idSite"])'class="badge badge-danger mb-1 mr-2"><i class="ft-trash"></i></span>
+                    
+                </ng-template>
+              </ngx-datatable-column>
+
+            </ngx-datatable>
+            
+
+
+           <!--  <ngx-datatable *ngFor="let item of columns | filter:term" [rows]="rows" [rowHeight]="50" class="bootstrap core-bootstrap" [limit]="10"
+            [columnMode]="ColumnMode.force" [headerHeight]="50" [footerHeight]="50" [scrollbarH]="true">
+        
+            <ngx-datatable-column name="Nom Site" prop="nomSite" [width]="150">{{item.nomSite}}</ngx-datatable-column>
+            <ngx-datatable-column name="Local" prop="local" [width]="150">{{item.local}}</ngx-datatable-column>
+            <ngx-datatable-column name="Date EAPL" prop="dateEAPL" [width]="150">{{item.dateEAPL}}</ngx-datatable-column>
+
+            <ngx-datatable-column name="Nom Quai" prop="nomQuai" [width]="150">{{item.nomQuai}}</ngx-datatable-column>
+            <ngx-datatable-column name="Nom Remorque" prop="nomRemorque" [width]="150">{{item.nomRemorque}}</ngx-datatable-column>
+          
+            <ngx-datatable-column name="Time RAPL" prop="timeRAPL" [width]="150">{{item.timeRAPL}}</ngx-datatable-column>
+            <ngx-datatable-column name="Time SPL" prop="timeSPL" [width]="150">{{item.timeSPL}}</ngx-datatable-column>
+            <ngx-datatable-column name="Actions" [width]="70">
+
+            </ngx-datatable-column>
+
+          </ngx-datatable> -->
+
+            
+            <!--/ ngx-datatable Basic -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  

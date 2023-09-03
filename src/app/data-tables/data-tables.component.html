@@ -1,0 +1,77 @@
+<!-- Basic Datatables -->
+<ng-template #editremModal let-modal>
+  <div #editremorque style="display: none;"></div></ng-template>
+
+<section id="ngx-datatable-basic">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title">Remorques </h4>
+        </div>
+        <div class="card-content">
+          <div class="card-body">
+            <div class="my-3">
+              <button type="button" class="btn btn-primary mr-2" (click)="openmodal()">
+                <span class="d-flex align-items-center">
+                  <i class="ft-plus mr-1"></i>
+                  <span>Create</span>
+                </span>
+              </button>
+           
+            </div>
+
+            <fieldset class="form-group">
+             
+              <label for="ngx-filter-ref" class="float-left">
+                <input
+                #search
+                id="search"
+                type="text"
+                class="form-control"
+                placeholder="Chercher"
+                aria-label="Chercher"
+                aria-describedby="basic-addon1"
+              />
+              </label>
+              <button type="button" class="btn btn-primary mr-2" >
+                <span class="d-flex align-items-center">
+                  <span>Chercher</span>
+                </span>
+              </button>
+          </fieldset>
+
+            <!-- ngx-datatable Basic -->
+            <ngx-datatable *ngIf="IsDataReady" [rows]="rows" [rowHeight]="50" class="bootstrap core-bootstrap" [limit]="10"
+              [columnMode]="ColumnMode.force" [headerHeight]="50" [footerHeight]="50" [scrollbarH]="true">
+              <ngx-datatable-column name="ID Remorque" prop="idRemorque" [width]="150"></ngx-datatable-column>
+              <ngx-datatable-column name="NomRemorque" prop="nomRemorque" [width]="150"></ngx-datatable-column>
+              <ngx-datatable-column name="Destination" prop="destination" [width]="150"></ngx-datatable-column>
+              <ngx-datatable-column name="Nom Transporteur" prop="nomTransporteur" [width]="150"></ngx-datatable-column>
+              <ngx-datatable-column name="Date ESP" prop="dateESP" [width]="150"></ngx-datatable-column>
+              <ngx-datatable-column name="Time ESP" prop="timeESP" [width]="150"></ngx-datatable-column>
+              <ngx-datatable-column name="Deg Urg" prop="degUrg" [width]="150"></ngx-datatable-column>
+              <ngx-datatable-column name="Contenu" prop="contenu" [width]="150"></ngx-datatable-column>
+              <ngx-datatable-column name="Nom Quai" prop="nomQuai" [width]="150"></ngx-datatable-column>
+              <ngx-datatable-column name="Traçabilité" prop="traçabilité" [width]="150"></ngx-datatable-column>
+
+
+              <ngx-datatable-column name="Actions" [width]="100">
+                <ng-template ngx-datatable-cell-template let-row ='row'> 
+                  <span (click)= 'this.delete(row["idRemorque"])'class="badge badge-danger mb-1 mr-2"><i class="ft-trash"></i></span>
+                  <span (click)= "openmodal()" class="badge badge-info mb-1 mr-2"><i class="ft-plus"></i></span>
+
+              
+              </ng-template>
+              </ngx-datatable-column>
+
+            </ngx-datatable>
+            <!--/ ngx-datatable Basic -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

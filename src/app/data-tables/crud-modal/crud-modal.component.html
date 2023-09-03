@@ -1,0 +1,158 @@
+<div class="modal-header">
+  <h4 class="modal-title"> ajouter  </h4>
+  <button (click)="clickAdd()" type="button" id="close " class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+    x
+  </button>
+</div>
+<form [formGroup]="myForm" (ngSubmit)="submitForm()"> 
+  <div class="modal-body taskboard-modal">
+    <div class="container">
+      <fieldset class="form-group position-relative has-icon-left">
+        <div class="form-control-position">
+          
+        </div>
+        <label class="form-control-label">ID Remorque</label>
+        <input formControlName ="idRemorque"
+      
+        name="idRemorque" type="number" 
+          placeholder="nomRemorque" class="form-control">
+        <div class="form-control-position control-position-right">
+          
+        </div>
+      </fieldset>
+      <fieldset class="form-group position-relative has-icon-left">
+        <div class="form-control-position">
+          
+        </div>
+        <label class="form-control-label">Nom Remorque</label>
+        <input formControlName ="nomRemorque"
+      
+        name="nomRemorque" type="text" 
+          placeholder="nomRemorque" class="form-control">
+        <div class="form-control-position control-position-right">
+          
+        </div>
+      </fieldset>
+      <fieldset class="form-group position-relative has-icon-left">
+        <div class="form-control-position">
+          
+        </div>
+        <label class="form-control-label">Nom Quai</label>
+          <select formControlName ="qaui"
+          name="idQuai"   foreignKeyField='idQuai' 
+            class="form-control">
+            <option *ngFor="let item of listQuai " [ngValue]="item.idQuai">{{item.nomQuai}}</option>
+          </select>
+          <div class="form-control-position control-position-right">
+        </div>
+      </fieldset>
+      <fieldset class="form-group position-relative has-icon-left">
+        <div class="form-control-position">
+          
+        </div>
+        <label class="form-control-label">Nom Transporteur</label>
+        <input formControlName ="nomTransporteur" 
+      
+        name="nomTransporteur" type="text" 
+          placeholder="nomTransporteur" class="form-control">
+        <div class="form-control-position control-position-right">
+          
+        </div>
+      </fieldset>
+      <fieldset class="form-group position-relative has-icon-left">
+        <div class="form-control-position">
+          
+        </div>
+        <label class="form-control-label">traçabilité</label>
+        <input formControlName ="traçabilité"
+       
+        name="traçabilité"  type="text" 
+           placeholder="traçabilité" class="form-control" >
+        <div class="form-control-position control-position-right">
+          
+        </div>
+      </fieldset>
+      <fieldset class="form-group position-relative has-icon-left">
+        <div class="form-control-position">
+          
+        </div>
+        <label class="form-control-label">dateESP
+        </label>
+        <input formControlName ="dateESP"
+    
+        name="dateESP"type="date" 
+           placeholder="dateESP" class="form-control" >
+        <div class="form-control-position control-position-right">
+         
+        </div>
+      </fieldset>
+      <fieldset class="form-group position-relative has-icon-left">
+        <div class="form-control-position">
+         
+        </div>
+        <label class="form-control-label">timeESP</label>
+        <input formControlName ="timeESP"
+      
+        name="timeESP" type="time" 
+          placeholder="timeESP" class="form-control">
+        <div class="form-control-position control-position-right">
+         
+        </div>
+      </fieldset>
+      <fieldset class="form-group position-relative has-icon-left">
+        <div class="form-control-position">
+        
+        </div>
+        <label class="form-control-label">Contenu</label>
+        <select formControlName ="contenu"
+       
+        name="contenu"   class="form-control">
+          <option>Mixte</option>
+          <option>Homogene</option>
+        </select>
+        <div class="form-control-position control-position-right">
+         
+        </div>
+      </fieldset>
+      <fieldset class="form-group position-relative has-icon-left">
+        <div class="form-control-position">
+        
+        </div>
+        <label class="form-control-label">Destination</label>
+        <select formControlName ="destination"
+       
+        name="destination"   class="form-control">
+          <option>Rades</option>
+          <option>BenArous</option>
+        </select>
+        <div class="form-control-position control-position-right">
+         
+        </div>
+      </fieldset>
+      <fieldset class="form-group position-relative has-icon-left">
+        <div class="form-control-position">
+        
+        </div>
+        <label class="form-control-label">degUrg</label>
+        <input formControlName ="degUrg"
+       
+        name="degUrg"  type="text" 
+           placeholder="degUrg" class="form-control" >
+        <div class="form-control-position control-position-right">
+         
+        </div>
+      </fieldset>
+     
+    </div>
+  </div>
+  <div class="modal-footer taskboard-modal-footer">
+    <button type="button"  id="close" aria-label="Close"  class="btn btn-secondary" data-bs-dismiss="modal" (click)="activeModal.dismiss('Cross click')">
+      Fermer
+   </button>
+    <button type="button"  aria-label="btn-save"  class="btn btn-primary btn-save" (click)="addremorque()">
+     Créer
+    </button>
+  
+  </div>
+</form>
+
