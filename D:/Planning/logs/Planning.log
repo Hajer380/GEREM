@@ -1,0 +1,98 @@
+2021-06-08 20:48:41 INFO  com.grmk.grmk.GrmkApplication - Starting GrmkApplication on MacBook-Pro-de-Hajer.local with PID 46471 (/Users/hajerch/projetSagem/grmk/target/classes started by hajerch in /Users/hajerch/projetSagem/grmk)
+2021-06-08 20:48:41 INFO  com.grmk.grmk.GrmkApplication - No active profile set, falling back to default profiles: default
+2021-06-08 20:48:41 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-06-08 20:48:41 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-06-08 20:48:43 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-06-08 20:48:43 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-06-08 20:48:44 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 116ms. Found 9 repository interfaces.
+2021-06-08 20:48:44 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-06-08 20:48:44 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-06-08 20:48:44 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 38ms. Found 9 repository interfaces.
+2021-06-08 20:48:44 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-06-08 20:48:44 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-06-08 20:48:44 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data LDAP - Could not safely identify store assignment for repository candidate interface com.grmk.grmk.repositories.MouvementQuaiRepository.
+2021-06-08 20:48:44 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data LDAP - Could not safely identify store assignment for repository candidate interface com.grmk.grmk.repositories.MouvementRemorqueRepository.
+2021-06-08 20:48:44 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data LDAP - Could not safely identify store assignment for repository candidate interface com.grmk.grmk.repositories.QCommentaireRepository.
+2021-06-08 20:48:44 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data LDAP - Could not safely identify store assignment for repository candidate interface com.grmk.grmk.repositories.QuaiRepository.
+2021-06-08 20:48:44 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data LDAP - Could not safely identify store assignment for repository candidate interface com.grmk.grmk.repositories.RCommentaireRepository.
+2021-06-08 20:48:44 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data LDAP - Could not safely identify store assignment for repository candidate interface com.grmk.grmk.repositories.RemorqueRepository.
+2021-06-08 20:48:44 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data LDAP - Could not safely identify store assignment for repository candidate interface com.grmk.grmk.repositories.RoleRepository.
+2021-06-08 20:48:44 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data LDAP - Could not safely identify store assignment for repository candidate interface com.grmk.grmk.repositories.SiteRepository.
+2021-06-08 20:48:44 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data LDAP - Could not safely identify store assignment for repository candidate interface com.grmk.grmk.repositories.UtilisateurRepository.
+2021-06-08 20:48:44 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 38ms. Found 0 repository interfaces.
+2021-06-08 20:48:45 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7655b7e0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-08 20:48:45 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$f5d60512] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-08 20:48:45 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.context.ApplicationContextException: Unable to start ServletWebServerApplicationContext due to missing ServletWebServerFactory bean.
+2021-06-08 20:48:45 INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-06-08 20:48:45 ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.context.ApplicationContextException: Unable to start ServletWebServerApplicationContext due to missing ServletWebServerFactory bean.
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:157)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at com.grmk.grmk.GrmkApplication.main(GrmkApplication.java:21)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.context.ApplicationContextException: Unable to start ServletWebServerApplicationContext due to missing ServletWebServerFactory bean.
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getWebServerFactory(ServletWebServerApplicationContext.java:206)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:180)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:154)
+	... 13 common frames omitted
+2021-06-08 20:52:06 INFO  com.grmk.grmk.GrmkApplication - Starting GrmkApplication on MacBook-Pro-de-Hajer.local with PID 47360 (/Users/hajerch/projetSagem/grmk/target/classes started by hajerch in /Users/hajerch/projetSagem/grmk)
+2021-06-08 20:52:06 INFO  com.grmk.grmk.GrmkApplication - No active profile set, falling back to default profiles: default
+2021-06-08 20:52:06 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-06-08 20:52:06 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-06-08 20:52:08 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-06-08 20:52:08 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-06-08 20:52:08 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 108ms. Found 9 repository interfaces.
+2021-06-08 20:52:08 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-06-08 20:52:08 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-06-08 20:52:08 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 32ms. Found 9 repository interfaces.
+2021-06-08 20:52:08 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-06-08 20:52:08 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-06-08 20:52:08 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data LDAP - Could not safely identify store assignment for repository candidate interface com.grmk.grmk.repositories.MouvementQuaiRepository.
+2021-06-08 20:52:08 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data LDAP - Could not safely identify store assignment for repository candidate interface com.grmk.grmk.repositories.MouvementRemorqueRepository.
+2021-06-08 20:52:08 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data LDAP - Could not safely identify store assignment for repository candidate interface com.grmk.grmk.repositories.QCommentaireRepository.
+2021-06-08 20:52:08 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data LDAP - Could not safely identify store assignment for repository candidate interface com.grmk.grmk.repositories.QuaiRepository.
+2021-06-08 20:52:08 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data LDAP - Could not safely identify store assignment for repository candidate interface com.grmk.grmk.repositories.RCommentaireRepository.
+2021-06-08 20:52:08 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data LDAP - Could not safely identify store assignment for repository candidate interface com.grmk.grmk.repositories.RemorqueRepository.
+2021-06-08 20:52:08 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data LDAP - Could not safely identify store assignment for repository candidate interface com.grmk.grmk.repositories.RoleRepository.
+2021-06-08 20:52:08 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data LDAP - Could not safely identify store assignment for repository candidate interface com.grmk.grmk.repositories.SiteRepository.
+2021-06-08 20:52:08 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data LDAP - Could not safely identify store assignment for repository candidate interface com.grmk.grmk.repositories.UtilisateurRepository.
+2021-06-08 20:52:08 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16ms. Found 0 repository interfaces.
+2021-06-08 20:52:09 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$53abaf59] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-08 20:52:09 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$d32bfc8b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-08 20:52:09 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.context.ApplicationContextException: Unable to start ServletWebServerApplicationContext due to missing ServletWebServerFactory bean.
+2021-06-08 20:52:09 INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-06-08 20:52:09 ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.context.ApplicationContextException: Unable to start ServletWebServerApplicationContext due to missing ServletWebServerFactory bean.
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:157)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at com.grmk.grmk.GrmkApplication.main(GrmkApplication.java:21)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.context.ApplicationContextException: Unable to start ServletWebServerApplicationContext due to missing ServletWebServerFactory bean.
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getWebServerFactory(ServletWebServerApplicationContext.java:206)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:180)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:154)
+	... 13 common frames omitted
